@@ -1,25 +1,35 @@
                   Prefix Verb   URI Pattern                            Controller#Action
-          teachers_index GET    /teachers/index(.:format)              teachers#index
-            teachers_new GET    /teachers/new(.:format)                teachers#new
-         teachers_create GET    /teachers/create(.:format)             teachers#create
-           teachers_show GET    /teachers/show(.:format)               teachers#show
-           teachers_edit GET    /teachers/edit(.:format)               teachers#edit
-         teachers_update GET    /teachers/update(.:format)             teachers#update
-        teachers_destroy GET    /teachers/destroy(.:format)            teachers#destroy
-       store_items_index GET    /store_items/index(.:format)           store_items#index
-         store_items_new GET    /store_items/new(.:format)             store_items#new
-      store_items_create GET    /store_items/create(.:format)          store_items#create
-        store_items_show GET    /store_items/show(.:format)            store_items#show
-        store_items_edit GET    /store_items/edit(.:format)            store_items#edit
-      store_items_update GET    /store_items/update(.:format)          store_items#update
-     store_items_destroy GET    /store_items/destroy(.:format)         store_items#destroy
-             shows_index GET    /shows/index(.:format)                 shows#index
-               shows_new GET    /shows/new(.:format)                   shows#new
-            shows_create GET    /shows/create(.:format)                shows#create
-              shows_show GET    /shows/show(.:format)                  shows#show
-              shows_edit GET    /shows/edit(.:format)                  shows#edit
-            shows_update GET    /shows/update(.:format)                shows#update
-           shows_destroy GET    /shows/destroy(.:format)               shows#destroy
+              home_index GET    /home/index(.:format)                  home#index
+                home_new GET    /home/new(.:format)                    home#new
+             home_create GET    /home/create(.:format)                 home#create
+               home_show GET    /home/show(.:format)                   home#show
+               home_edit GET    /home/edit(.:format)                   home#edit
+             home_update GET    /home/update(.:format)                 home#update
+            home_destroy GET    /home/destroy(.:format)                home#destroy
+                   shows GET    /shows(.:format)                       shows#index
+                         POST   /shows(.:format)                       shows#create
+                new_show GET    /shows/new(.:format)                   shows#new
+               edit_show GET    /shows/:id/edit(.:format)              shows#edit
+                    show GET    /shows/:id(.:format)                   shows#show
+                         PATCH  /shows/:id(.:format)                   shows#update
+                         PUT    /shows/:id(.:format)                   shows#update
+                         DELETE /shows/:id(.:format)                   shows#destroy
+             store_items GET    /store_items(.:format)                 store_items#index
+                         POST   /store_items(.:format)                 store_items#create
+          new_store_item GET    /store_items/new(.:format)             store_items#new
+         edit_store_item GET    /store_items/:id/edit(.:format)        store_items#edit
+              store_item GET    /store_items/:id(.:format)             store_items#show
+                         PATCH  /store_items/:id(.:format)             store_items#update
+                         PUT    /store_items/:id(.:format)             store_items#update
+                         DELETE /store_items/:id(.:format)             store_items#destroy
+                teachers GET    /teachers(.:format)                    teachers#index
+                         POST   /teachers(.:format)                    teachers#create
+             new_teacher GET    /teachers/new(.:format)                teachers#new
+            edit_teacher GET    /teachers/:id/edit(.:format)           teachers#edit
+                 teacher GET    /teachers/:id(.:format)                teachers#show
+                         PATCH  /teachers/:id(.:format)                teachers#update
+                         PUT    /teachers/:id(.:format)                teachers#update
+                         DELETE /teachers/:id(.:format)                teachers#destroy
                  lessons GET    /lessons(.:format)                     lessons#index
                          POST   /lessons(.:format)                     lessons#create
               new_lesson GET    /lessons/new(.:format)                 lessons#new
@@ -52,7 +62,7 @@
                          PATCH  /instructed_classes/:id(.:format)      instructed_classes#update
                          PUT    /instructed_classes/:id(.:format)      instructed_classes#update
                          DELETE /instructed_classes/:id(.:format)      instructed_classes#destroy
-              home_index GET    /home(.:format)                        home#index
+                         GET    /home(.:format)                        home#index
                          POST   /home(.:format)                        home#create
                 new_home GET    /home/new(.:format)                    home#new
                edit_home GET    /home/:id/edit(.:format)               home#edit

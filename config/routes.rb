@@ -1,53 +1,24 @@
 Rails.application.routes.draw do
+  
+  get 'home/index'
 
+  get 'home/new'
 
- 
+  get 'home/create'
 
-  get 'teachers/index'
+  get 'home/show'
 
-  get 'teachers/new'
+  get 'home/edit'
 
-  get 'teachers/create'
+  get 'home/update'
 
-  get 'teachers/show'
-
-  get 'teachers/edit'
-
-  get 'teachers/update'
-
-  get 'teachers/destroy'
-
-  get 'store_items/index'
-
-  get 'store_items/new'
-
-  get 'store_items/create'
-
-  get 'store_items/show'
-
-  get 'store_items/edit'
-
-  get 'store_items/update'
-
-  get 'store_items/destroy'
-
-  get 'shows/index'
-
-  get 'shows/new'
-
-  get 'shows/create'
-
-  get 'shows/show'
-
-  get 'shows/edit'
-
-  get 'shows/update'
-
-  get 'shows/destroy'
+  get 'home/destroy'
 
   # devise_for :users
   # # get 'home/index'
-
+  resources :shows
+  resources :store_items
+  resources :teachers
   resources :lessons
   resources :enrollments
   resources :gift_cards
