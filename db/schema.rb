@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211204906) do
+ActiveRecord::Schema.define(version: 20171211210458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "enrollments", force: :cascade do |t|
+    t.bigint "instructed_class_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instructed_class_id"], name: "index_enrollments_on_instructed_class_id"
+    t.index ["user_id"], name: "index_enrollments_on_user_id"
+  end
 
   create_table "gift_cards", force: :cascade do |t|
     t.string "name"
@@ -23,6 +32,17 @@ ActiveRecord::Schema.define(version: 20171211204906) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_gift_cards_on_user_id"
+  end
+
+  create_table "instructed_classes", force: :cascade do |t|
+    t.bigint "lesson_id"
+    t.bigint "teacher_id"
+    t.time "time"
+    t.string "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_instructed_classes_on_lesson_id"
+    t.index ["teacher_id"], name: "index_instructed_classes_on_teacher_id"
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -78,6 +98,10 @@ ActiveRecord::Schema.define(version: 20171211204906) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "enrollments", "instructed_classes"
+  add_foreign_key "enrollments", "users"
   add_foreign_key "gift_cards", "users"
+  add_foreign_key "instructed_classes", "lessons"
+  add_foreign_key "instructed_classes", "teachers"
   add_foreign_key "store_items", "users"
 end
