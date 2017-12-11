@@ -14,3 +14,16 @@
  *= require_self
  */
 @import "materialize";
+  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+
+.logo {
+	background-image: asset_url('assets/images/logo.png');
+}
+
+.page-footer {
+	background-color: rgb(202, 230, 112);
+}
+
+.nav-wrapper {
+	background-color: rgb(202, 230, 112);
+}

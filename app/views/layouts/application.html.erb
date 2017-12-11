@@ -3,6 +3,7 @@
   <head>
     <title>Onyx</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -11,6 +12,65 @@
   <body>
 	  <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <div class="logo"></div>
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="sass.html">About Us</a></li>
+          <li><a href="badges.html">Instructors</a></li>
+          <li><a href="collapsible.html">Classes</a></li>
+          <li><a href="collapsible.html">Prices</a></li>
+          <li><a href="collapsible.html">Workshops</a></li>
+          <li><a href="collapsible.html">Girls Night Out</a></li>
+          <li><a href="collapsible.html">Shows</a></li>
+          <li><a href="collapsible.html">FAQ'S</a></li>
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
+    <footer class="page-footer ">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Hours</h5>
+                <p class="grey-text text-lighten-4">MONDAY 9:30-12:30  5:00-9:00
+                <br>
+                TUESDAY 11:30-2:30 5:00-9:00PM
+                <br>
+                WEDNESDAY 10:00-2:00 5:00-9:00PM
+                <br>
+                THURSDAY 9:30-12:30 5:00-9:00
+                <br>
+                FRIDAY 9:30-12:30
+                <br>
+                ​SATURDAY 9:30-12:30
+                <br>
+                SUNDAY 9:00-2:00
+                <br>
+                RECEPTIONIST HOURS
+                <br>
+                ~MONDAY-THURSDAY 5:30-9:00~</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">8385 South Allen Street #114 (540 West)
+                  Sandy, UT 84070</a></li>
+                  <br>
+                  <li><a class="grey-text text-lighten-3" href="#!">dancesaltlake@gmail.com</a></li>
+                  <br>
+                  <li><a class="grey-text text-lighten-3" href="#!">Tel: 801-652-9575</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">Sign In</a>
+            </div>
+          </div>
+        </footer>
   </body>
 </html>
