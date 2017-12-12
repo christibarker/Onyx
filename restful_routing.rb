@@ -1,11 +1,4 @@
                   Prefix Verb   URI Pattern                            Controller#Action
-              home_index GET    /home/index(.:format)                  home#index
-                home_new GET    /home/new(.:format)                    home#new
-             home_create GET    /home/create(.:format)                 home#create
-               home_show GET    /home/show(.:format)                   home#show
-               home_edit GET    /home/edit(.:format)                   home#edit
-             home_update GET    /home/update(.:format)                 home#update
-            home_destroy GET    /home/destroy(.:format)                home#destroy
                    shows GET    /shows(.:format)                       shows#index
                          POST   /shows(.:format)                       shows#create
                 new_show GET    /shows/new(.:format)                   shows#new
@@ -62,7 +55,7 @@
                          PATCH  /instructed_classes/:id(.:format)      instructed_classes#update
                          PUT    /instructed_classes/:id(.:format)      instructed_classes#update
                          DELETE /instructed_classes/:id(.:format)      instructed_classes#destroy
-                         GET    /home(.:format)                        home#index
+              home_index GET    /home(.:format)                        home#index
                          POST   /home(.:format)                        home#create
                 new_home GET    /home/new(.:format)                    home#new
                edit_home GET    /home/:id/edit(.:format)               home#edit

@@ -1,18 +1,6 @@
 Rails.application.routes.draw do
   
-  get 'home/index'
-
-  get 'home/new'
-
-  get 'home/create'
-
-  get 'home/show'
-
-  get 'home/edit'
-
-  get 'home/update'
-
-  get 'home/destroy'
+ 
 
   # devise_for :users
   # # get 'home/index'

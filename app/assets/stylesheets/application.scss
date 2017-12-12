@@ -14,10 +14,10 @@
  *= require_self
  */
 @import "materialize";
-  @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 .logo {
-	background-image: asset_url('assets/images/logo.png');
+	height: 147px;
 }
 
 .page-footer {
@@ -26,4 +26,9 @@
 
 .nav-wrapper {
 	background-color: rgb(202, 230, 112);
+	text-color: black;
+}
+
+.carousel-inner {
+	height: 600px;
 }
