@@ -5,3 +5,44 @@
 .float_right {
 	float: right;
 }
+
+.studio_img {
+	height: 400px;
+	width: 400px;
+	box-shadow: 10px 10px 5px rgb(202, 230, 112);
+	margin-left: 5%;
+}
+
+.studio_img_two {
+	height: 400px;
+	width: 400px;
+	box-shadow: 10px 10px 5px rgb(202, 230, 112);
+	margin-right: 5%;
+}
+
+.card {
+	background-color: rgb(202, 230, 112);
+}
+
+.circle {
+	height: 194px;
+  width: 172px;
+	display: inline-block;
+	box-shadow: 10px 10px 5px rgb(202, 230, 112);
+	margin-bottom: 5%;
+}
+
+.flow-text{
+ margin-left: 20%;
+}
+
+.small {
+	height: 150px;
+  width: 75px;
+}
+
+.font {
+	font-family: italic;
+	font-size: 12px;
+}
+

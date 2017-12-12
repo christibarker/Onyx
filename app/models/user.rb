@@ -16,10 +16,9 @@ class User < ApplicationRecord
 
 	has_many :shows
 	has_many :gift_cards
-	has_many :enrollments, through: :instructed_classes
 	has_many :store_items
-	has_many :lessons, through: :instructed_classes
-	has_many :instructed_classes
-	has_many :teachers, through: :instructed_classes
+	has_many :enrollments
+	has_many :instructed_classes, through: :enrollments
+	
 
 end
