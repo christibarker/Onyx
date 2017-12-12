@@ -1,0 +1,17 @@
+  
+<div class="form">
+    <%= form_with model: @teacher, class: "new_lesson", html: {multipart: true} do |f| %>
+    	<%# f.label :class_name %>
+        <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
+        <br>
+        <%# f.label :description %>
+        <%= f.text_field :bio, placeholder: 'biography', class: "form-control", id: "bio" %>
+       <br>
+         <%= f.label :avatar, "add image" %>
+        <br>
+        <%= f.file_field :avatar, class:"button" %>
+        <br>
+        <br>
+        <%= f.submit %>
+    <% end %>
+</div>	
