@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  get "/pages/:page" => "pages#gno"
-  get "/pages/:page" => "pages#prices"
+  get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {
   registrations: 'users/registrations'
