@@ -1,0 +1,12 @@
+  
+<div class="form">
+    <%= form_with model:  class: "new_lesson", html: {multipart: true} do |f| %>
+    	<%= f.label :class_name %>
+        <%= f.text_field :lesson_name, placeholder: 'class_name', class: "form-control", id: "lesson_name" %>
+        <br>
+        <%= f.label :description %>
+         <p>(min. 50 characters)</p>
+        <%= f.text_field :description, placeholder: 'date', class: "form-control", id: "description" %>
+        <%= f.submit %>
+    <% end %>
+</div>	

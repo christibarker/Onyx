@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   
- 
+  get "/pages/:page" => "pages#gno"
+  get "/pages/:page" => "pages#prices"
+
+  devise_for :users, controllers: {
+  registrations: 'users/registrations'
+      }
 
   # devise_for :users
   # # get 'home/index'
+  # resources :pages, :gno, :prices
   resources :shows
   resources :store_items
   resources :teachers
@@ -14,9 +20,7 @@ Rails.application.routes.draw do
   resources :home
   root "home#index"
 
-   devise_for :users, controllers: {
-        registrations: 'users/registrations'
-      }
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
