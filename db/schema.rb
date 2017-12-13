@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171212235643) do
+ActiveRecord::Schema.define(version: 20171213184629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,22 +61,34 @@ ActiveRecord::Schema.define(version: 20171212235643) do
     t.datetime "avatar_updated_at"
   end
 
+  create_table "seats", force: :cascade do |t|
+    t.string "section"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "show_seatings", force: :cascade do |t|
+    t.string "quanity"
+    t.string "cost"
+    t.bigint "seat_id"
+    t.bigint "show_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seat_id"], name: "index_show_seatings_on_seat_id"
+    t.index ["show_id"], name: "index_show_seatings_on_show_id"
+  end
+
   create_table "shows", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.integer "quanity"
-    t.integer "floor_seating"
-    t.integer "general_admission"
-    t.integer "vip_table"
-    t.integer "standing_room"
-    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "avatar_file_name"
     t.string "avatar_content_type"
     t.integer "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.index ["user_id"], name: "index_shows_on_user_id"
+    t.date "date"
+    t.string "time"
   end
 
   create_table "store_items", force: :cascade do |t|
@@ -143,6 +155,7 @@ ActiveRecord::Schema.define(version: 20171212235643) do
   add_foreign_key "gift_cards", "users"
   add_foreign_key "instructed_classes", "lessons"
   add_foreign_key "instructed_classes", "teachers"
-  add_foreign_key "shows", "users"
+  add_foreign_key "show_seatings", "seats"
+  add_foreign_key "show_seatings", "shows"
   add_foreign_key "store_items", "users"
 end
