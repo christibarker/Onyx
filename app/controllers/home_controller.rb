@@ -2,6 +2,10 @@ class HomeController < ApplicationController
   def index
   end
 
+  def contact_us
+    
+  end
+
   def new
   end
 
@@ -18,5 +22,9 @@ class HomeController < ApplicationController
   end
 
   def destroy
+  end
+
+  def lesson_params
+    params.require(:contact).permit(:name, :email, :id, :subject, :message)
   end
 end

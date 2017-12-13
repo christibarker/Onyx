@@ -2,3 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
+	$('.destroy_lesson').on 'ajax:success', ->
+		# console.log('worked')
+		$(this).closest('.lesson').remove()
