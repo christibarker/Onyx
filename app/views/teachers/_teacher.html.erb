@@ -1,4 +1,4 @@
-  
+  	<div class="col s3 m6">
 	    <div class="card horizontal teachers">
 	    	<div class="card-image">
        		<%= image_tag teacher.avatar.url(:thumb) %>
@@ -10,10 +10,10 @@
 		           <p><%# classes_taught %></p>
 	        </div>
 	        <div class="card-action float_right">
-	        	<a class="float_right" href="#">delete</a>
-	          <a class="float_right" href="#">edit</a>
-	         
+	        	<%= link_to "delete", teacher, method: :delete, remote: true, class: "destroy_teacher float_right"%>
+	 	          <%= link_to "edit", edit_teacher_path(teacher), class: "float_right" %>
+
 	        </div>
 	      </div>
 	    </div>
-
+	  </div>

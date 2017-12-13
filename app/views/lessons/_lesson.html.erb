@@ -8,8 +8,8 @@
 		          <p><%= lesson.description %></p>
 	        </div>
 	        <div class="card-action">
-	          <a class="float_right" href="#">delete</a>
-	          <a class="float_right" href="#">edit</a>
+	          <%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
+	          <%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
 	        </div>
 	      </div>
 	    </div>
