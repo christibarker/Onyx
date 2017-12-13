@@ -1,6 +1,6 @@
 	    <div class="card horizontal lessons">
 	    	<div class="card-image">
-       		<img src="https://lorempixel.com/100/190/nature/6">
+       		<%= image_tag lesson.avatar.url(:thumb) %>
       	</div>
 	      <div class="card-stacked">
 	        <div class="card-content">
@@ -8,8 +8,8 @@
 		          <p><%= lesson.description %></p>
 	        </div>
 	        <div class="card-action">
-	          <a href="#">edit</a>
-	          <a href="#">delete</a>
+	          <a class="float_right" href="#">delete</a>
+	          <a class="float_right" href="#">edit</a>
 	        </div>
 	      </div>
 	    </div>
