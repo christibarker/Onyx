@@ -1,6 +1,6 @@
 	    <div class="card horizontal lessons">
 	    	<div class="card-image">
-       		<img src="https://lorempixel.com/100/190/nature/6">
+       		<%= image_tag lesson.avatar.url(:thumb) %>
       	</div>
 	      <div class="card-stacked">
 	        <div class="card-content">
@@ -8,8 +8,8 @@
 		          <p><%= lesson.description %></p>
 	        </div>
 	        <div class="card-action">
-	          <a href="#">edit</a>
-	          <a href="#">delete</a>
+	          <%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
+	          <%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
 	        </div>
 	      </div>
 	    </div>

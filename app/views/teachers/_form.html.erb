@@ -1,6 +1,6 @@
   
 <div class="form">
-    <%= form_with model: @teacher, class: "new_lesson", html: {multipart: true} do |f| %>
+    <%= form_with model: @teacher, class: "new_teacher", html: {multipart: true} do |f| %>
     	<%# f.label :class_name %>
         <%= f.text_field :name, placeholder: 'name', class: "form-control", id: "name" %>
         <br>

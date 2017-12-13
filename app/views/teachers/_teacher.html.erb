@@ -1,7 +1,7 @@
-  
+  	<div class="col s3 m6">
 	    <div class="card horizontal teachers">
 	    	<div class="card-image">
-       		<%# image_tag teacher.avatar.url(:medium) %>
+       		<%= image_tag teacher.avatar.url(:thumb) %>
       	</div>
 	      <div class="card-stacked">
 	        <div class="card-content">
@@ -9,10 +9,11 @@
 		          <p><%= teacher.bio %></p>
 		           <p><%# classes_taught %></p>
 	        </div>
-	        <div class="card-action">
-	          <a href="#">edit</a>
-	          <a href="#">delete</a>
+	        <div class="card-action float_right">
+	        	<%= link_to "delete", teacher, method: :delete, remote: true, class: "destroy_teacher float_right"%>
+	 	          <%= link_to "edit", edit_teacher_path(teacher), class: "float_right" %>
+
 	        </div>
 	      </div>
 	    </div>
-
+	  </div>
