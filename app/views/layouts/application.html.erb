@@ -34,6 +34,7 @@
           <li><a href="collapsible.html"><%= link_to "Shows", shows_path %></a></li>
           <li><a href="#faqs">FAQ'S</a></li>
           <li><a href="#faqs"><%= link_to "Contact Us", new_home_path %></a></li>
+          <li><a href="#"><%= link_to "My Profile", edit_user_registration_path %></a></li>
 
         </ul>
       </div>
@@ -78,7 +79,7 @@
           <div class="footer-copyright black-text">
             <div class="container">
             © 2017 Copyright Text
-            <a class="black-text text-lighten-4 right" href="#!">Sign In</a>
+              <a class="black-text text-lighten-4" href="#!"><%= link_to "Sign In", user_session_path, class: "right "  %></a>
             </div>
           </div>
         </footer>

@@ -1,2 +1,19 @@
-<h1>Lessons#show</h1>
-<p>Find me in app/views/lessons/show.html.erb</p>
+<div class="header">
+	<h1>Class Description</h1>
+ 	<div class="row">
+	 	<div class="col l3 s3"></div>
+	 	 <div class="col l6 s9">
+	 	 	<div class="card blue-grey darken-1">
+	      <div class="card-content white-text">
+	      	<%= link_to "Click here for Class Schedule", instructed_classes_path %>
+	   		</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="row">
+		<div class="col l3 s3"></div>
+		<div class="col l6 s9">
+	  	<%= render @lesson %>
+		</div>
+  </div>
