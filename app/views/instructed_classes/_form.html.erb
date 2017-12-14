@@ -1,0 +1,32 @@
+<div class="form">
+    <%= form_with model: @instructed_class, class: "new_schedule" do |f| %>
+     <br>
+        <%= f.label :classes %>
+        <div class="input-field">
+             <%= f.select :lesson_id, Lesson.all.collect {|l| [l.name, l.id]}, {}, {class: "form-control"} %>
+        </div>
+        <br>
+        <%= f.label :teacher %>
+        <div class="input-field">
+             <%= f.select :teacher_id, Teacher.all.collect {|t| [t.name, t.id]},{}, {class: "form-control"} %>
+        </div>
+        
+        <br>
+        <%= f.label :time %>
+        <%= f.time_field :time, placeholder: 'time', class: "form-control", id: "time" %>
+        <br>
+        <%= f.label :duration %>
+        <%= f.text_field :duration, placeholder: 'duration', class: "form-control", id: "duration" %>
+
+        <%= f.submit "new schedule" %>
+    <% end %>
+</div>	
+
+        <%# f.select :lesson, options_for_select(@lesson.map{ |l| [l.name, l.id ]},selected_key = l.object.lesson_id), {}, class: "form-control", id: "classes" %>
+<%# f.select :lesson_id, @lessons.map {|l| [l.name, l.id] }, class: "form-control", id: "classes"%>
+
+ <%# f.select :teacher, options_for_select(@teacher.map{ |t| [t.name, t.id ]},selected_key = t.object.teacher_id), {}, class: "form-control", id: "teacher" %>
+
+<%# f.select :country_id, options_for_select(@countries.map{ |c| [c.name, c.id, {'data-currency_code'=>c.currency_code}] }, selected_key = f.object.country_id) %>
+
+<!-- select("post", "person_id", Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) -->
