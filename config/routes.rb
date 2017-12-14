@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
   
+  get 'instructed_classes/index'
+
+  get 'instructed_classes/new'
+
+  get 'instructed_classes/create'
+
+  get 'instructed_classes/show'
+
+  get 'instructed_classes/edit'
+
+  get 'instructed_classes/update'
+
+  get 'instructed_classes/destroy'
+
   get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {

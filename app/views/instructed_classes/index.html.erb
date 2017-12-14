@@ -1,5 +1,6 @@
 <div class="header">
-	<h1>Edit Show</h1>
+	<h1>Class Schedule</h1>
+	<p>call to action link</p>
 </div>
 
 	<div class="row">
@@ -7,10 +8,15 @@
 	  <div class="col s12 m6">
 	    <div class="card blue-grey darken-1">
 	      <div class="card-content white-text">
-	        <span class="card-title">Edit Show</span>
+	        <span class="card-title">Create Schedule</span>
 	    		<%= render 'form' %>
 	      </div>
 	    </div>
 	  </div>
 	  <div class="col s3 m3"></div>
 	</div>
+	<div class="row">
+	  	<% @instructed_classes.each do |instructed_class| %>
+	    	<%= render instructed_class %>
+			<% end %>
+  </div>

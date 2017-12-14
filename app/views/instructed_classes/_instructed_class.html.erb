@@ -1,0 +1,18 @@
+	    <div class="card horizontal instructed_classes">
+	    <!-- 	<div class="card-image">
+       		<%# image_tag lesson.avatar.url(:thumb) %>
+      	</div> -->
+	      <div class="card-stacked">
+	        <div class="card-content">
+	        	<span class="card-title">
+	        		<p><%= instructed_class.teacher.name %></p>
+	        		<p><%= instructed_class.lesson.name %></p>
+		          <p><%= instructed_class.time %></p>
+		          <p><%= instructed_class.duration %></p>
+	        </div>
+	        <div class="card-action">
+	          <%= link_to "delete", instructed_classes_destroy_path, method: :delete, remote: true, class: "destroy_instructed float_right"%>
+	          <%= link_to "edit", instructed_classes_edit_path(instructed_class), class: "float_right" %>
+	        </div>
+	      </div>
+	    </div>
