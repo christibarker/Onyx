@@ -9,7 +9,8 @@
 		          <p><%= teacher.bio %></p>
 		           <p><%# classes_taught %></p>
 	        </div>
-	        <div class="card-action float_right">
+	        <div class="card-action">
+	        	<%= link_to "Find out more about me!", teacher_path(teacher)  %>
 	        	<%= link_to "delete", teacher, method: :delete, remote: true, class: "destroy_teacher float_right"%>
 	 	          <%= link_to "edit", edit_teacher_path(teacher), class: "float_right" %>
 

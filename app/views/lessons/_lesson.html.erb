@@ -8,6 +8,7 @@
 		          <p><%= lesson.description %></p>
 	        </div>
 	        <div class="card-action">
+	        	<%= link_to "Find out more about the class!", lesson_path(lesson)  %>
 	          <%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
 	          <%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
 	        </div>
