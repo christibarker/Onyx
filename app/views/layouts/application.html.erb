@@ -27,10 +27,10 @@
           <li><a href="#top">About Us</a></li>
           <li><a href="#instructors"><%= link_to "Instructors", teachers_path %></a></li>
           <li><a href="collapsible.html"><%= link_to "Classes", lessons_path %></a></li>
-          <li><a href="collapsible.html"><%# link_to "Prices", static_path %></a></li>
+          <li><a href="collapsible.html"><%= link_to "Prices", static_path('prices') %></a></li>
            <li><a href="collapsible.html"><%= link_to "Class Schedule", instructed_classes_path %></a></li>
           <li><a href="collapsible.html">Workshops</a></li>
-          <li><a href="collapsible.html"><%# link_to "Girls Night Out", static_path %></a></li>
+          <li><a href="collapsible.html"><%= link_to "Girls Night Out", static_path('gno') %></a></li>
           <li><a href="collapsible.html"><%= link_to "Shows", shows_path %></a></li>
           <li><a href="#faqs">FAQ'S</a></li>
           <li><a href="#faqs"><%= link_to "Contact Us", new_home_path %></a></li>
