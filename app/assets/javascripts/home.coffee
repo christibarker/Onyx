@@ -21,3 +21,12 @@ $(document).on 'turbolinks:load', ->
 		# $('.carousel').carousel('destroy');
 
  	$('.collapsible').collapsible();
+
+
+ 	#   var options = [
+  #   {selector: '.pole', offset: 200, callback: customCallbackFunc },
+  #   {selector: '.other-class', offset: 200, callback: function() {
+  #     customCallbackFunc();
+  #   } },
+  # ];
+  # Materialize.scrollFire(options);

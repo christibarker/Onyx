@@ -1,4 +1,5 @@
   	<div class="col s3 m6 teachers">
+  	<div class="<%= 'teacher' if local_assigns[:teacher] %>">
 	    <div class="card horizontal">
 	    	<div class="card-image">
        		<%= image_tag teacher.avatar.url(:thumb) %>
@@ -6,7 +7,7 @@
 	      <div class="card-stacked">
 	        <div class="card-content">
 	        	<span class="card-title"><%= teacher.name %></span>
-		          <p><%= teacher.bio %></p>
+		          <p class="<%= 'part_bio' if !local_assigns[:part_bio] %>"><%= teacher.bio %></p>
 		           <p><%# classes_taught %></p>
 	        </div>
 	        <% if !local_assigns[:hide_link] %>
@@ -18,4 +19,5 @@
 		      <% end %>
 	      </div>
 	    </div>
+	   </div>
 	  </div>
