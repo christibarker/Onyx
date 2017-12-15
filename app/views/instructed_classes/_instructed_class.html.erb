@@ -1,9 +1,13 @@
 	
-   <div class="col s2"><p><%= instructed_class.time %></p></div>
 
-  <div class="col s3"><a class="waves-effect waves-light btn">Add Class</a></div>
-  <div class="col s3">	<p><%= instructed_class.lesson.name %></p></div>
-  <div class="col s2"><p><%= instructed_class.teacher.name %></p></div>
+	<tr>
+	  <td><%= instructed_class.time %></td>
+	  <td>Add Class</td>
+	  <td><%= instructed_class.lesson.name %></td>
+	  <td><%= instructed_class.teacher.name %></td>
+	  <td><%= instructed_class.duration %></td>
+	  <td><%= link_to "edit", instructed_classes_edit_path(instructed_class) %></td>
+	  <td><%= link_to "delete", instructed_class, method: :delete, remote: true, class: "destroy_instructed_class" %></td>
+	</tr>
 
-  <div class="col s2"> <p><%= instructed_class.duration %></p>
-  </div>
+         
