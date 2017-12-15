@@ -2,12 +2,15 @@ Rails.application.routes.draw do
   
 
 
+
+
   get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {
   registrations: 'users/registrations'
       }
 
+  resources :seats
   resources :shows
   resources :store_items
   resources :teachers

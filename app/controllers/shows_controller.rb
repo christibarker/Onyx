@@ -2,6 +2,8 @@ class ShowsController < ApplicationController
   def index
     @shows = Show.all
     @show = Show.new
+    @seats = Seat.all
+     # @seat = Seat.find(show_params[:seat_id])
   end
 
   def new
@@ -41,6 +43,7 @@ class ShowsController < ApplicationController
   end
 
    def show_params
-    params.require(:show).permit(:title, :description, :date, :time, :id, :avatar)
+    params.require(:show).permit(:title, :description, :date, 
+      :time, :id, :avatar, :seat_id)
   end
 end

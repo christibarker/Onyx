@@ -1,0 +1,10 @@
+<div class="form">
+    <%= form_with model: @seat, class: "new_seat" do |f| %>
+    
+      <%# f.label :section %>
+      <%= f.text_field :section, placeholder: 'section', class: "form-control", id: "section" %>
+      <br>
+      <br>
+      <%= f.submit %>
+    <% end %>
+</div>	
