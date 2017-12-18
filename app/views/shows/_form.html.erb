@@ -14,41 +14,44 @@
         <%= f.text_field :description, placeholder: 'description', class: "form-control", id: "description" %>
        <br>
         <table>
-            <thead>
-              <tr>
-                <th>Seating Section</th>
-                <th>Cost</th>
-                <th>Quanity of seats</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <% Seat.all.each do |seat| %>
-                    <td>
-                   <label for="seat_ids[]"><%= seat.section %></label>
-                    <%# for seat in Seat.find(:all) do %>
-                     <br><%# check_box_tag 'seat_ids[]', seat.id,
-                         @model.seat_ids.include?(seat.id) %>
-                        <%= seat.section.humanize %>
-                    <%# end %>
-                    <%# f.label :cost %>
-                    <%= f.text_field :cost, placeholder: 'cost', class: "form-control", id: "cost" %>
-                    <%# f.label :quanity of seats %>
-                    <%= f.text_field :quanity, placeholder: 'quanity', class: "form-control", id: "quanity" %>
-                    </td>
-                    <% end %>
-                </tr>
+          <thead>
+            <tr>
+            <th>Seating Section</th>
+            <th>Cost</th>
+            <th>Quanity of seats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+           <div class="row">
+              
+                <% for seat in Seat.find(:all) %>
+                  <%= check_box_tag "seat[seat_ids][]", seat.id, @seat.section.seat?(section) %>
+                  <td><%= seat.section %></td>
+                <% end %>
 
-        </tbody>
-        <%= f.label :Seating %>
-        <div class="input-field">
-        <%= f.select :seat_id, Seat.all.collect {|s| [s.section, s.id]},{}, {class: "form-control"} %>
-        </div>
-         <%= f.label :avatar, "add image" %>
+               <%# fields_for(:seat, @seat) do |sub_fields| %>
+              
+                  <%# sub_fields.text_field :section %>
+               
+                <%# end %>
+              <%= f.fields_for :show_seatings do |ss_form| %>
+              <%# f.label :cost %>
+              <td class="line_width"><%= ss_form.text_field :cost, placeholder: 'cost', class: "form-control", id: "cost" %></td>
+              <%# f.label :quanity of seats %>
+              <td class="line_width"><%= ss_form.text_field :quanity, placeholder: 'quanity', class: "form-control", id: "quanity" %></td>
+              </td>
+              <% end %>
+            </tr>
+              </div>
+          </tbody>
+        </table>
+
+        <%= f.label :avatar, "add image" %>
         <br>
         <%= f.file_field :avatar, class:"button" %>
         <br>
         <br>
         <%= f.submit %>
-    <% end %>
+        <% end %>
 </div>	

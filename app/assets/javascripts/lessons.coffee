@@ -5,3 +5,6 @@ $(document).on 'turbolinks:load', ->
 	$('.destroy_lesson').on 'ajax:success', ->
 		# console.log('worked')
 		$(this).closest('.lesson').remove()
+
+	$('.part_description').truncate
+		lines: 2

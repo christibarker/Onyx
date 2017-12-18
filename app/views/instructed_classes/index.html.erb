@@ -5,7 +5,11 @@
 	 	 <div class="col l6 s9">
 	 	 	<div class="card blue-grey darken-1">
 	      <div class="card-content white-text">
+	      	<% if user_signed_in? %>
+	      		<%= link_to "Start class", instructed_classes_path %>
+	      		<% else %>
 	      	<%= link_to "Login to start a class", user_session_path %>
+	      	<% end %>
 	   		</div>
 			</div>
 		</div>
@@ -17,7 +21,7 @@
 	  <div class="col s12 m6">
 	    <div class="card blue-grey darken-1">
 	      <div class="card-content white-text">
-	        <span class="card-title">Create Schedule</span>
+	        <span class="card-title">Create Schedule/Workshop Schedule</span>
 	    		<%= render 'form' %>
 	      </div>
 	    </div>
