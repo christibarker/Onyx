@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @teacher = Teacher.all
   end
 
   def contact_us

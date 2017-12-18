@@ -1,0 +1,2 @@
+module ShowSeatingHelper
+end

@@ -15,6 +15,14 @@ cancel_user_registration GET    /users/cancel(.:format)                users/reg
                          PUT    /users(.:format)                       users/registrations#update
                          DELETE /users(.:format)                       users/registrations#destroy
                          POST   /users(.:format)                       users/registrations#create
+                   seats GET    /seats(.:format)                       seats#index
+                         POST   /seats(.:format)                       seats#create
+                new_seat GET    /seats/new(.:format)                   seats#new
+               edit_seat GET    /seats/:id/edit(.:format)              seats#edit
+                    seat GET    /seats/:id(.:format)                   seats#show
+                         PATCH  /seats/:id(.:format)                   seats#update
+                         PUT    /seats/:id(.:format)                   seats#update
+                         DELETE /seats/:id(.:format)                   seats#destroy
                    shows GET    /shows(.:format)                       shows#index
                          POST   /shows(.:format)                       shows#create
                 new_show GET    /shows/new(.:format)                   shows#new
