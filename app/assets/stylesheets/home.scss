@@ -6,23 +6,30 @@
 	float: right;
 }
 
-.studio_img {
+.studio {
 	height: 400px;
+	width: 355px;
+	margin-right: 5%;
+}
+
+.studio_img {
+	height: 410px;
 	width: 400px;
 	box-shadow: 10px 10px 5px rgb(202, 230, 112);
 	margin-left: 5%;
+	
 }
 
 .studio_img_two {
-	height: 400px;
+	height: 410px;
 	width: 400px;
 	box-shadow: 10px 10px 5px rgb(202, 230, 112);
 	margin-right: 5%;
 }
 
-.card {
-	background-color: rgb(202, 230, 112);
-}
+// .card {
+// 	background-color: rgb(202, 230, 112);
+// }
 
 .circle {
 	height: 194px;
@@ -56,9 +63,9 @@
 	    font-weight: 600;
 }
 
-#faqs{
-margin-top: -3%;
-}
+// #faqs{
+// margin-top: -3%;
+// }
 
 .center_one {
 	margin-top: 5%;
@@ -88,9 +95,7 @@ margin-top: -3%;
 // 	margin-left: 25%;
 // }
 
-.shadow {
-	box-shadow: 10px 10px 5px black;
-}
+
 
 
 
