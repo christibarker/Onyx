@@ -48,7 +48,8 @@
 }
 
 .carousel .carousel-item {
-	width: 550px !important;
+	width: 750px !important;
+	height: 600px !important;
 }
 
 .title {
@@ -68,7 +69,17 @@ margin-top: -3%;
 .font {
 	font-family: fantasy;
 }
-    
+ 
+ .border {
+ 	background-color: rgb(202, 230, 112);
+ 	height: 550px !important;
+ 	// box-shadow: 10px 10px 5px rgb(202, 230, 112);
+ }  
+
+ .margin {
+ 	margin-top: 1%;
+ 	margin-bottom: -1%;
+ } 
 
 // .pole {
 // 	height: 100px;
@@ -77,7 +88,9 @@ margin-top: -3%;
 // 	margin-left: 25%;
 // }
 
-
+.shadow {
+	box-shadow: 10px 10px 5px black;
+}
 
 
 
