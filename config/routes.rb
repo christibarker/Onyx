@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
 
 
+  get 'email/index'
+
   get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {
