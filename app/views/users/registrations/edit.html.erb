@@ -5,11 +5,24 @@
       <li>
         <div class="collapsible-header"><i class="material-icons">whatshot</i>My Schedule</div>
         <div class="collapsible-body">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr class="color">
+                <th>Start Time</th>
+                <th>Classes/Workshops</th>
+                <th>Teacher</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+          
           <span>
-            <%= @enrollments.each do |enrollment| %>
-              <%= render 'enrollments/enrollment', enrollment: :enrollment %>
+            <% @enrollments.each do |enrollment| %>
+          <tbody class="enrollments">
+              <%= render 'enrollments/enrollment', enrollment: enrollment, hide_count: true, hide_name: true %>
+          </tbody>
             <% end %>
           </span>
+          </table>
         </div>
       </li>
       <li>
