@@ -1,10 +1,15 @@
-<div class="row">
+<div class="row spacing">
   <div class="col s2 m2"></div>
   <div class="col s6 m6">
     <ul class="collapsible" data-collapsible="accordion">
       <li>
         <div class="collapsible-header"><i class="material-icons">whatshot</i>My Schedule</div>
-        <div class="collapsible-body"><span>display classes added</span>
+        <div class="collapsible-body">
+          <span>
+            <%# if current_user_id == current_user_id %>
+              <%# render @enrollments %>
+            <%# end %>
+          </span>
         </div>
       </li>
       <li>
@@ -118,22 +123,20 @@
   </div>
   <div class="col s2 m2">
     <div class="card-image">
-         <%= image_tag @user.avatar.url(:medium) %>
-        <br>
-          user info
-        <p><%= @user.first_name %>
-        <p><%= @user.last_name %>
-          email
-     "home_phone"
-   "cell_phone"
- 
-          <br>
-         <p><%= @user.birthday %></p>
-          <br>
-          subscriptions
-          "notification"
-            "subscribe_to_email"
-            "subscribe_to_newsletter"
+      <%= image_tag @user.avatar.url(:medium) %>
+      <br>
+      <h5>My Info</h5>
+      <p>First Name: <%= @user.first_name %></p>
+      <p>Last Name: <%= @user.last_name %></p>
+      <p>Email: <%= @user.email %></p>
+      <p>H. Phone: <%= @user.home_phone %></p>
+      <p>C. Phone: <%= @user.cell_phone %></p>
+      <p>Birthday: <%= @user.birthday %></p>
+      <br>
+      subscriptions
+      "notification"
+      "subscribe_to_email"
+      "subscribe_to_newsletter"
     </div>
   </div>
 </div>        

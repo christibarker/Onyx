@@ -1,5 +1,5 @@
 	<tr>
-	  <td><%= instructed_class.time %></td>
+	  <td><%= instructed_class.time.to_formatted_s(:short) %></td>
 	  <td>
 	  	<%= form_with model: @enrollment, scope: 'enrollment', class: "new_enrollment"  do |f| %>
       	<%# f.collection_select(:instructed_class_id, @instructed_classes, :id, :lesson_id)%>
