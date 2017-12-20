@@ -8,7 +8,7 @@
          <%= f.hidden_field :current_user_id, value: current_user.id %>
         <%= f.submit "add", :disable_with => 'Submiting...' %>
        <% end %>
-      	<p class="small_font">(), reserved, (), open</p>
+      	<p class="small_font">(), reserved, (<%= instructed_class.class_size %>), open</p>
     </td>
 	  <td><%= instructed_class.lesson.name %></td>
 	  <td><%= instructed_class.teacher.name %></td>

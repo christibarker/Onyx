@@ -6,9 +6,9 @@
         <div class="collapsible-header"><i class="material-icons">whatshot</i>My Schedule</div>
         <div class="collapsible-body">
           <span>
-            <%# if current_user_id == current_user_id %>
-              <%# render @enrollments %>
-            <%# end %>
+            <%= @enrollments.each do |enrollment| %>
+              <%= render 'enrollments/enrollment', enrollment: :enrollment %>
+            <% end %>
           </span>
         </div>
       </li>

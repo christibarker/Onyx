@@ -14,6 +14,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/edit
   def edit
+    @instructed_classes = InstructedClass.all
+    @enrollments = current_user.enrollments
+
     super
   end
 
