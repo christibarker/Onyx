@@ -1,11 +1,9 @@
 <tr class="enrollment">
-	  <td><%= enrollment.instructed_class.time %></td>
-	  <td>
-	  	name of student
-    </td>
-	  <td><%= enrollment.instructed_class.lesson.name %></td>
-	  <td><%= enrollment.instructed_class.teacher.name %></td>
-	  <td><%= enrollment.instructed_class.duration %></td>
-	  <td>class count</td>
-	  <td><%= link_to "remove", instructed_class, method: :delete, remote: true, class: "destroy_instructed_class" %></td>
-	</tr>
+	<td><%= enrollment.instructed_class.time %></td>
+	<td><%= enrollment.user.first_name %>name of student</td>
+	<td><%= enrollment.instructed_class.lesson.name %></td>
+	<td><%= enrollment.instructed_class.teacher.name %></td>
+	<td><%= enrollment.instructed_class.duration %></td>
+	<td>class count</td>
+	<td><%= link_to "remove", enrollment, method: :delete, remote: true, class: "destroy_enrollment" %></td>
+</tr>

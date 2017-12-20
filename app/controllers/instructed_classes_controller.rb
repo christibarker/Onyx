@@ -3,6 +3,7 @@ class InstructedClassesController < ApplicationController
   	@lessons = Lesson.all
     @teachers = Teacher.all
     @enrollments = Enrollment.all
+    @enrollment = Enrollment.new
     @instructed_class = InstructedClass.new
     @instructed_classes = InstructedClass.all
   end

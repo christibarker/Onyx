@@ -17,9 +17,9 @@ class EnrollmentsController < ApplicationController
     @instructed_classes = InstructedClass.all
     @enrollment = Enrollment.new
     respond_to do |format|
-      @enrollment = Enrollment.create(enrollment_params)
+      @enrollment = current_user.enrollments.create(enrollment_params)
       format.js
-      format.html{redirect_to enrollments_path}
+      format.html{redirect_to instructed_classes_path}
     end
   end
 
