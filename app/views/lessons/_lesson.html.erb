@@ -1,19 +1,24 @@
-	    <div class="card horizontal lessons">
-	    	<div class="card-image">
-       		<%= image_tag lesson.avatar.url(:thumb) %>
-      	</div>
-	      <div class="card-stacked">
-	        <div class="card-content">
-	        	<span class="card-title"><%= lesson.name %></span>
-		          <p><%= lesson.description %></p>
-	        </div>
-	        <% if !local_assigns[:hide_link] %>
-		        <div class="card-action">
-		        	<%= link_to "Find out more about the class!", lesson_path(lesson)  %>
-		          <%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
-		          <%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
-		        </div>
-	        <% end %>
-	      </div>
-	    </div>
+
+<div class="col s3 m6 lessons">
+	<div class="<%= 'lesson' if local_assigns[:lesson] %>">
+		<div class="card horizontal">
+			<div class="card-image">
+			<%= image_tag lesson.avatar.url(:thumb) %>
+			</div>
+			<div class="card-stacked">
+			<div class="card-content">
+			<span class="card-title"><%= lesson.name %></span>
+			<p class="<%= 'part_description' if !local_assigns[:part_description] %>"><%= lesson.description %></p>
+			</div>
+			<% if !local_assigns[:hide_link] %>
+			<div class="card-action">
+			<%= link_to "Find out more about the class!", lesson_path(lesson)  %>
+			<%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
+			<%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
+			</div>
+			<% end %>
+			</div>
+		</div>
+	</div>
+</div>
 

@@ -2,8 +2,10 @@ class ShowsController < ApplicationController
   def index
     @shows = Show.all
     @show = Show.new
+    # @seat = Seat.find_by_id(seat_params[:id])
+    @show.show_seatings.build
     @seats = Seat.all
-     # @seat = Seat.find(show_params[:seat_id])
+    @show_seating = ShowSeating.all
   end
 
   def new

@@ -1,13 +1,17 @@
-	
-
 	<tr>
 	  <td><%= instructed_class.time %></td>
-	  <td>Add Class</td>
+	  <td>
+	  	<%= form_with model: @enrollment, scope: 'enrollment', class: "new_enrollment"  do |f| %>
+      	<%# f.collection_select(:instructed_class_id, @instructed_classes, :id, :lesson_id)%>
+        <%#  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
+        <%= f.hidden_field :instructed_class_id, value: instructed_class.id %>
+        <%= f.submit "add", :disable_with => 'Submiting...' %>
+       <% end %>
+       <p class="small_font">(), reserved, (), open</p>
+    </td>
 	  <td><%= instructed_class.lesson.name %></td>
 	  <td><%= instructed_class.teacher.name %></td>
 	  <td><%= instructed_class.duration %></td>
 	  <td><%= link_to "edit", edit_instructed_class_path(instructed_class) %></td>
 	  <td><%= link_to "delete", instructed_class, method: :delete, remote: true, class: "destroy_instructed_class" %></td>
 	</tr>
-
-         

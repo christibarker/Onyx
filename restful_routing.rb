@@ -1,4 +1,5 @@
                   Prefix Verb   URI Pattern                            Controller#Action
+             email_index GET    /email/index(.:format)                 email#index
                   static GET    /pages/:page(.:format)                 pages#show
         new_user_session GET    /users/sign_in(.:format)               devise/sessions#new
             user_session POST   /users/sign_in(.:format)               devise/sessions#create

@@ -3,9 +3,13 @@
  	<div class="row">
 	 	<div class="col l3 s3"></div>
 	 	 <div class="col l6 s9">
-	 	 	<div class="card blue-grey darken-1">
+	 	 	<div class="card grey darken-4">
 	      <div class="card-content white-text">
-	      	<%= link_to "Click here for Class Schedule", instructed_classes_path %>
+	      	<% if user_signed_in? %>
+	      			<%= link_to "Click here for Class Schedule", instructed_classes_path %>
+	      		<% else %>
+	      			<%= link_to "Login to start a class", user_session_path %>
+	      		<% end %>
 	   		</div>
 			</div>
 		</div>
@@ -13,7 +17,5 @@
 </div>
 	<div class="row">
 		<div class="col l3 s3"></div>
-		<div class="col l6 s9">
-	  	<%= render @lesson, hide_link: true %>
-		</div>
+	  	<%= render @lesson, hide_link: true, part_description: true, lesson: false %>
   </div>

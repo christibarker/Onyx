@@ -6,11 +6,17 @@
         <br>
         <%# f.label :description %>
         <%= f.text_field :description, placeholder: 'description', class: "form-control", id: "description" %>
+        <br>
+          <%= f.check_box :workshop, id: 'lesson_workshop' %> 
+        <%= f.label :workshop %>
+        <br>
+        <br>
           <%= f.label :avatar, "add image" %>
         <br>
         <%= f.file_field :avatar, class:"button" %>
         <br>
         <br>
-        <%= f.submit "Create Class" %>
+
+        <%= f.submit %>
     <% end %>
 </div>	
