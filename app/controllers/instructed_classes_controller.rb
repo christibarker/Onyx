@@ -48,6 +48,6 @@ class InstructedClassesController < ApplicationController
   private
 
   def instructed_class_params
-    params.require(:instructed_class).permit(:lesson_id, :teacher_id, :id, :avatar, :time, :duration)
+    params.require(:instructed_class).permit(:lesson_id, :teacher_id, :id, :avatar, :time, :duration, :enrollment)
   end
 end

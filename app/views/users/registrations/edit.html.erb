@@ -121,13 +121,19 @@
          <%= image_tag @user.avatar.url(:medium) %>
         <br>
           user info
-        <p><%= current_user.first_name %>
-        <p><%= current_user.last_name %>
+        <p><%= @user.first_name %>
+        <p><%= @user.last_name %>
           email
+     "home_phone"
+   "cell_phone"
+ 
           <br>
-          birthday
+         <p><%= @user.birthday %></p>
           <br>
           subscriptions
+          "notification"
+            "subscribe_to_email"
+            "subscribe_to_newsletter"
     </div>
   </div>
 </div>        

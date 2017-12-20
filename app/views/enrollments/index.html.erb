@@ -1,2 +1,41 @@
-<h1>Enrollments#index</h1>
-<p>Find me in app/views/enrollments/index.html.erb</p>
+<div class="header">
+	<h1>Student Enrollment</h1>
+	 	<div class="row">
+	 	<div class="col l3 s3"></div>
+	 	 <div class="col l6 s9">
+	 	 	<div class="card grey darken-4">
+	      <div class="card-content white-text">
+	      	<% if user_signed_in? %>
+	      		<%= link_to "Class Schedule", instructed_classes_path %>
+	      		<% else %>
+	      	<%= link_to "Login to start a class", user_session_path %>
+	      	<% end %>
+	   		</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col l2 s2"></div>
+	<div class="col l8 s8">
+	<br>
+	<table class="highlight responsive-table">
+	  <thead>
+	    <tr class="color">
+	        <th>Start Time</th>
+	        <th>Student Name</th>
+	        <th>Classes</th>
+	        <th>Teacher</th>
+	        <th>Duration</th>
+	        <th>Class Count</th>
+	    </tr>
+	  </thead>
+	  <tbody class="enrollments">
+	   <%= render @enrollments %>
+	  </tbody>
+	</table>
+	<br>
+	</div>
+	<div class="col l2 s2"></div>
+</div>
