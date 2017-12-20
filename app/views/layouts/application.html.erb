@@ -20,7 +20,8 @@
         </div>
         <div class="col l3 s3"></div>
         <div class="col l3 s3">
-          <h4 class="font">Remind yourself nobody poles like you. You design yourself.</h4></div> 
+          <h4 class="font">"Remind yourself nobody poles like you." </h4>
+            <h4 class="font">"You design yourself."</h4></div> 
       </div>
     </div>
     <nav>
@@ -38,6 +39,7 @@
           <li><a href="#faqs"><%= link_to "Contact Us", email_index_path %></a></li>
           <li><a href="#"><%= link_to "My Profile", edit_user_registration_path %></a></li>
            <li><a href="#"><%= link_to "Enrollments", enrollments_path %></a></li>
+           <li><a href=""><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
         </ul>
       </div>
     </nav>

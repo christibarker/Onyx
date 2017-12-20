@@ -1,10 +1,28 @@
-<div class="row">
+<div class="row spacing">
   <div class="col s2 m2"></div>
   <div class="col s6 m6">
     <ul class="collapsible" data-collapsible="accordion">
       <li>
         <div class="collapsible-header"><i class="material-icons">whatshot</i>My Schedule</div>
-        <div class="collapsible-body"><span>display classes added</span>
+        <div class="collapsible-body">
+          <table class="highlight responsive-table">
+            <thead>
+              <tr class="color">
+                <th>Start Time</th>
+                <th>Classes/Workshops</th>
+                <th>Teacher</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+          
+          <span>
+            <% @enrollments.each do |enrollment| %>
+          <tbody class="enrollments">
+              <%= render 'enrollments/enrollment', enrollment: enrollment, hide_count: true, hide_name: true %>
+          </tbody>
+            <% end %>
+          </span>
+          </table>
         </div>
       </li>
       <li>
@@ -118,22 +136,20 @@
   </div>
   <div class="col s2 m2">
     <div class="card-image">
-         <%= image_tag @user.avatar.url(:medium) %>
-        <br>
-          user info
-        <p><%= @user.first_name %>
-        <p><%= @user.last_name %>
-          email
-     "home_phone"
-   "cell_phone"
- 
-          <br>
-         <p><%= @user.birthday %></p>
-          <br>
-          subscriptions
-          "notification"
-            "subscribe_to_email"
-            "subscribe_to_newsletter"
+      <%= image_tag @user.avatar.url(:medium) %>
+      <br>
+      <h5>My Info</h5>
+      <p>First Name: <%= @user.first_name %></p>
+      <p>Last Name: <%= @user.last_name %></p>
+      <p>Email: <%= @user.email %></p>
+      <p>H. Phone: <%= @user.home_phone %></p>
+      <p>C. Phone: <%= @user.cell_phone %></p>
+      <p>Birthday: <%= @user.birthday %></p>
+     <!--  <h6>Subscriptions</h6> -->
+      <p>notifications</p>
+      <p>subscribe to email</p>
+      <p>subscribe to newsletter</p>
+      
     </div>
   </div>
 </div>        

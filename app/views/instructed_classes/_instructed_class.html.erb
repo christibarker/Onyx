@@ -1,13 +1,14 @@
 	<tr>
-	  <td><%= instructed_class.time %></td>
+	  <td><%= instructed_class.time.to_formatted_s(:short) %></td>
 	  <td>
 	  	<%= form_with model: @enrollment, scope: 'enrollment', class: "new_enrollment"  do |f| %>
       	<%# f.collection_select(:instructed_class_id, @instructed_classes, :id, :lesson_id)%>
         <%#  select("local_jobs", "job_id", @job_all.all.collect {|j| [ j.name, j.id ] }, {prompt: 'Select Contract'}) %>
         <%= f.hidden_field :instructed_class_id, value: instructed_class.id %>
+         <%= f.hidden_field :current_user_id, value: current_user.id %>
         <%= f.submit "add", :disable_with => 'Submiting...' %>
        <% end %>
-       <p class="small_font">(), reserved, (), open</p>
+      	<p class="small_font">(), reserved, (<%= instructed_class.class_size %>), open</p>
     </td>
 	  <td><%= instructed_class.lesson.name %></td>
 	  <td><%= instructed_class.teacher.name %></td>
