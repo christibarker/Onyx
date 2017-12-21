@@ -9,6 +9,7 @@ class LessonsController < ApplicationController
   end
 
   def create
+    
     @lesson = Lesson.new
     respond_to do |format|
       @lesson = Lesson.create(lesson_params)
@@ -24,6 +25,9 @@ class LessonsController < ApplicationController
 
   def edit
     @lesson = Lesson.find(params[:id])
+    @lesson.avatar = nil
+    @lesson.save
+    
   end
 
   def update
@@ -41,6 +45,6 @@ class LessonsController < ApplicationController
   end
 
    def lesson_params
-    params.require(:lesson).permit(:name, :description, :id, :avatar)
+    params.require(:lesson).permit(:name, :description, :id, :avatar, :workshop)
   end
 end

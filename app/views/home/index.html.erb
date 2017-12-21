@@ -165,7 +165,11 @@
 						<p>No Show Policy: $5 for every no show and $3 for every late cancel</p>
 		      </li>
 		       <li class="collection-item">
-		        <span class="title"><%= link_to "Start Here", new_user_session_path, class: "center" %></span>
+		        <span class="title"><% if user_signed_in? %>
+		    	<span class="card-title"><%= link_to "Join Us", instructed_classes_path %></span>
+		    <% else %>
+		      <span class="card-title"><%= link_to "Login to start a class", user_session_path %></span>
+		    <% end %></span>
 		      </li>
     		</ul>
     	</div>

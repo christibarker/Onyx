@@ -3,12 +3,11 @@
 	<% if !local_assigns[:hide_name] %>
 		<td><%= enrollment.user.first_name %>  <%= enrollment.user.last_name %></td>
 	<% end %>
+	<% if !local_assigns[:hide_count] %>
+		<td class="small_font">(), reserved, (<%=enrollment.instructed_class.class_size %>), open</td>
+	<% end %>
 	<td><%= enrollment.instructed_class.lesson.name %></td>
 	<td><%= enrollment.instructed_class.teacher.name %></td>
 	<td><%= enrollment.instructed_class.duration %></td>
-	<% if !local_assigns[:hide_count] %>
-		<td>class count</td>
-	<% end %>
-	
 		<td><%= link_to "remove", enrollment, method: :delete, remote: true, class: "destroy_enrollment" %></td>
 </tr>
