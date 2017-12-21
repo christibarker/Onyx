@@ -21,25 +21,29 @@
         <div class="col l3 s3"></div>
         <div class="col l3 s3">
           <h4 class="font">"Remind yourself nobody poles like you." </h4>
-            <h4 class="font">"You design yourself."</h4></div> 
+            <h4 class="font">"You design yourself."</h4>
+        </div> 
       </div>
     </div>
     <nav>
       <div class="nav-wrapper">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#home">About Us</a></li>
+          <li><a href="#top"><%= link_to "About Us", root_path %></a></li>
           <li><a href="#instructors"><%= link_to "Instructors", teachers_path %></a></li>
+           <li><a href="collapsible.html"><%= link_to "Prices", static_path('prices') %></a></li>
           <li><a href="collapsible.html"><%= link_to "Classes", lessons_path %></a></li>
-          <li><a href="collapsible.html"><%= link_to "Prices", static_path('prices') %></a></li>
            <li><a href="collapsible.html"><%= link_to "Class Schedule", instructed_classes_path %></a></li>
-          <li><a href="collapsible.html"><%= link_to "Workshop", instructed_classes_path %></a></li>
+          <li><a href="collapsible.html"><%= link_to "Workshop", lessons_path %></a></li>
           <li><a href="collapsible.html"><%= link_to "Girls Night Out", static_path('gno') %></a></li>
           <!-- <li><a href="collapsible.html"><%# link_to "Shows", shows_path %></a></li> -->
-          <li><a href="#home#faqs">FAQ'S</a></li>
-          <li><a href="#faqs"><%= link_to "Contact Us", email_index_path %></a></li>
-          <li><a href="#"><%= link_to "My Profile", edit_user_registration_path %></a></li>
-           <li><a href="#"><%= link_to "Enrollments", enrollments_path %></a></li>
-           <li><a href=""><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
+       
+           <!--  <li><a href="#home#faqs"><%# link_to "FAQ'S", root_path %></a></li> -->
+           <li><a href="#faqs"><%= link_to "Contact Us", email_index_path %></a></li>
+           <% if user_signed_in? %>
+            <li><a href="#"><%= link_to "Enrollments", enrollments_path %></a></li>
+            <li><a href="#"><%= link_to "My Profile", edit_user_registration_path %></a></li>
+            <li><a href=""><%= link_to "Log Out", destroy_user_session_path, method: :delete%></a></li>
+           <% end %>
         </ul>
       </div>
     </nav>
@@ -77,6 +81,7 @@
                   <br>
                   <li><a class="black-text text-lighten-3" href="#!">Tel: 801-652-9575</a></li>
                 </ul>
+                
               </div>
             </div>
           </div>

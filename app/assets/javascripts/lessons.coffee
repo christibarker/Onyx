@@ -7,4 +7,4 @@ $(document).on 'turbolinks:load', ->
 		$(this).closest('.lesson').remove()
 
 	$('.part_description').truncate
-		lines: 2
+		lines: 1

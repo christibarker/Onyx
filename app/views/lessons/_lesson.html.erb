@@ -1,9 +1,9 @@
 
-<div class="col s3 m6 lessons">
+<div class="col s3 m6">
 	<div class="<%= 'lesson' if local_assigns[:lesson] %>">
 		<div class="card horizontal">
 			<div class="card-image">
-			<%= image_tag lesson.avatar.url(:thumb) %>
+			<%# image_tag lesson.avatar.url(:thumb) %>
 			</div>
 			<div class="card-stacked">
 			<div class="card-content">
@@ -21,4 +21,5 @@
 		</div>
 	</div>
 </div>
+
 
