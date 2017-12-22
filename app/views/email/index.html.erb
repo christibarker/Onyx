@@ -1,43 +1,46 @@
- <div class="header">
+<div class="header">
 	<h1>Contact Us</h1>
-	
- 	<div class="row">
-	 	<div class="col l3 s3"></div>
-	 	 <div class="col l6 s9">
-	 	 	<div class="card grey darken-4">
-	      <div class="card-content white-text">
-	      	<% if user_signed_in? %>
-	      			<%= link_to "Click here for Class Schedule", instructed_classes_path %>
-	      		<% else %>
-	      			<%= link_to "Login to start a class", user_session_path %>
-	      		<% end %>
-	   		</div>
+	<div class="row">
+		<div class="col l3 s3"></div>
+		<div class="col l6 s9">
+			<div class="card grey darken-4">
+				<div class="card-content white-text">
+				<% if user_signed_in? %>
+				<%= link_to "Start class", instructed_classes_path %>
+				<% else %>
+				<%= link_to "Login to start a class", user_session_path %>
+				<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div class="row">
-	<div class="col l3 s3"></div>
-	<div class="col l6 s9">
-		<div class="form">
-		    <%= form_with model: @user, class: "email" do |f| %>
-		    	<%# f.label :name %>
+	<div class="row">
+	 	<div class="col l3 s3"></div>
+	 	 <div class="col l6 s9">  
+				<div class="form">
+    			<%= form_with model: @email, class: "new_email" do |f| %>
+		    		<%# f.label :name %>
 		        <%= f.text_field :first_name, placeholder: 'first name', class: "form-control", id: "first_name" %>
 		        <br>
 		        <%# f.label :name %>
 		        <%= f.text_field :last_name, placeholder: 'last name', class: "form-control", id: "last_name" %>
 		        <br>
-		        	<%# f.label :email %>
+		          <%# f.label :email %>
 		        <%= f.email_field :email, placeholder: 'email', class: "form-control", id: "email" %>
 		        <br>
-		        	<%# f.label :subject %>
+		        <%# f.label :subject %>
 		        <%= f.text_field :subject, placeholder: 'subject', class: "form-control", id: "subject" %>
 		        <br>
 		        <%# f.label :message %>
 		        <%= f.text_field :message, placeholder: 'message', class: "form-control", id: "message" %>
-		        <%= f.submit "Contact Us" %>
-		    <% end %>
+		        <br>
+		        <br>
+		        <div class="black-text">
+		        	<%= f.submit "Contact Us" %>
+        		</div>
+    			<% end %>
+				</div>	
 		</div>
+		<div class="col l3 s3"></div>
 	</div>
-</div>	

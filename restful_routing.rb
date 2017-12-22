@@ -1,5 +1,4 @@
                   Prefix Verb   URI Pattern                            Controller#Action
-             email_index GET    /email/index(.:format)                 email#index
                   static GET    /pages/:page(.:format)                 pages#show
         new_user_session GET    /users/sign_in(.:format)               users/sessions#new
             user_session POST   /users/sign_in(.:format)               users/sessions#create
@@ -16,6 +15,14 @@ cancel_user_registration GET    /users/cancel(.:format)                users/reg
                          PUT    /users(.:format)                       users/registrations#update
                          DELETE /users(.:format)                       users/registrations#destroy
                          POST   /users(.:format)                       users/registrations#create
+             email_index GET    /email(.:format)                       email#index
+                         POST   /email(.:format)                       email#create
+               new_email GET    /email/new(.:format)                   email#new
+              edit_email GET    /email/:id/edit(.:format)              email#edit
+                   email GET    /email/:id(.:format)                   email#show
+                         PATCH  /email/:id(.:format)                   email#update
+                         PUT    /email/:id(.:format)                   email#update
+                         DELETE /email/:id(.:format)                   email#destroy
                    seats GET    /seats(.:format)                       seats#index
                          POST   /seats(.:format)                       seats#create
                 new_seat GET    /seats/new(.:format)                   seats#new

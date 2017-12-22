@@ -1,11 +1,11 @@
 class HomeController < ApplicationController
   def index
     @teacher = Teacher.all
-    if user_signed_in?
-      redirect_to root_path
+    # if user_signed_in?
+    #   redirect_to edit_user_registration_path
     # else
-    #   redirect_to root_path
-    end
+    #   redirect_to home_index_path
+    # end
   end
 
   def new
@@ -26,7 +26,4 @@ class HomeController < ApplicationController
   def destroy
   end
 
-  def lesson_params
-    params.require(:contact).permit(:name, :email, :id, :subject, :message)
-  end
 end
