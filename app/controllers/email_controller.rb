@@ -1,20 +1,14 @@
 class EmailController < ApplicationController
+require 'pony'
   def index
- #  p params
-	# @to_email = 'kaco7777@gmail.com'
-	# @from_email = params[:email]
-	# @first_name = params[:first_name]
-	# @last_name = params[:last_name]
-	# @subject = params[:subject]
-	# @message = params[:message]
-	# @body = %(
-	# 					From: #{@name}, 
-				
-	# 					Email: #{@from_email}, 
-				
-	# 					Message: #{@message}
-	# 					)
-	# Pony.mail(to: @to_email, from: @from_email, subject: 'Contact Us', body: @body)
-	# erb :thanks
+  	# Pony.mail(:to => 'you@example.com', :via => :smtp) # sends via SMTP
+  	# Pony.mail(:to => 'you@example.com', :from => 'me@example.com', :subject => 'hi', :body => 'Hello there.')
+  	Pony.mail(:to => 'kaco7777@gmail.com', :from => 'contact_params(:email)', :subject => 'contact_params(:subject)', :body => 'contact_params(:message)')
+  end
+
+	private
+
+  def contact_params
+    params.require(:contact).permit(:first_name, :last_name, :email, :subject, :message)
   end
 end

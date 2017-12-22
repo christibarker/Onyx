@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
 
 
-  get 'email/index'
+  
 
   get "/pages/:page" => "pages#show", as: 'static'
 
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   }
 
+  resources :email
   resources :seats
   resources :shows
   resources :store_items

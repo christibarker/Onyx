@@ -119,6 +119,8 @@ GEM
     petergate (1.8.1)
       activerecord (> 4.0.0)
     pg (0.21.0)
+    pony (1.11)
+      mail (>= 2.0)
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
@@ -221,6 +223,7 @@ DEPENDENCIES
   paperclip (~> 5.0.0)
   petergate
   pg (~> 0.18)
+  pony
   puma (~> 3.7)
   rails (~> 5.1.4)
   restful_routing
