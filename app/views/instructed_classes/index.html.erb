@@ -32,21 +32,27 @@
   </div>
   <div class="col s3 m3"></div>
 </div>
-
-	<br>
-	<table class="highlight responsive-table">
-	  <thead>
-	    <tr class="color">
+<div class="row">
+	<div class="col s1 m1"></div>
+	<div class="col s10 m10">
+<!-- 	<br> -->
+		<table class="highlight responsive-table">
+		  <thead>
+		    <tr class="color">
+		    	<th>Date</th>
 	        <th>Start Time</th>
 	        <th>Sign up</th>
 	        <th>Class Size</th>
 	        <th>Classes</th>
 	        <th>Teacher</th>
 	        <th>Duration</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <%= render @instructed_classes %>
-	  </tbody>
-	</table>
-<br>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <%= render @instructed_classes %>
+		  </tbody>
+		</table>
+	<br>
+	</div>
+	<div class="col s1 m1"></div>
+</div>

@@ -16,13 +16,16 @@
              <%= f.select :teacher_id, Teacher.all.collect {|t| [t.name, t.id]},{}, {class: "form-control"} %>
         </div>
         <br>
-        <%= f.label :time %>
+        <%# f.label :time %>
         <%= f.time_field :time, placeholder: 'time', class: "form-control", id: "time" %>
         <br>
-        <%= f.label :duration %>
+          <%# f.label :date %>
+        <%= f.date_field :date, placeholder: 'date', class: "form-control", id: "date" %>
+        <br>
+        <%# f.label :duration %>
         <%= f.text_field :duration, placeholder: 'duration', class: "form-control", id: "duration" %>
          <br>
-        <%= f.label :class_size %>
+        <%# f.label :class_size %>
         <%= f.text_field :class_size, placeholder: 'class size', class: "form-control", id: "class_size" %>
         <br>
         <br>

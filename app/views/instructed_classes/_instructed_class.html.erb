@@ -1,4 +1,5 @@
 	<tr>
+		<td><%= instructed_class.date %></td>
 	  <td><%= instructed_class.time.to_formatted_s(:short) %></td>
 	  <td>
 	  	<%= form_with model: @enrollment, scope: 'enrollment', class: "new_enrollment"  do |f| %>

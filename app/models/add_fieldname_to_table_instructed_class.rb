@@ -1,2 +1,0 @@
-class AddFieldnameToTableInstructedClass < ApplicationRecord
-end

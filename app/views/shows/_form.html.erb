@@ -1,5 +1,5 @@
 <div class="form">
-    <%= form_with model: @show, class: "new_show", html: {multipart: true} do |f| %>
+    <%= nested_form_for @show, class: "new_show", html: {multipart: true} do |f| %>
     
         <%# f.label :date %>
         <%= f.date_field :date, placeholder: 'date', class: "form-control", id: "date" %>
@@ -57,3 +57,12 @@
         </div>
         <% end %>
 </div>	
+
+
+<%= f.fields_for : do |task_form| %>
+  <%= task_form.text_field :name %>
+  <%= task_form.link_to_remove "Remove this task" %>
+<% end %>
+<p><%= f.link_to_add "Add a task", :tasks %></p>
+
+
