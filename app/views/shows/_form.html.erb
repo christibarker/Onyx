@@ -25,10 +25,10 @@
             <tr>
            <div class="row">
               
-                <% for seat in Seat.find(:all) %>
-                  <%= check_box_tag "seat[seat_ids][]", seat.id, @seat.section.seat?(section) %>
-                  <td><%= seat.section %></td>
-                <% end %>
+                <%# for seat in Seat.find(:all) %>
+                  <%# check_box_tag "seat[seat_ids][]", seat.id, @seat.section.seat?(section) %>
+                  <td><%# seat.section %></td>
+                <%# end %>
 
                <%# fields_for(:seat, @seat) do |sub_fields| %>
               
@@ -58,11 +58,5 @@
         <% end %>
 </div>	
 
-
-<%= f.fields_for : do |task_form| %>
-  <%= task_form.text_field :name %>
-  <%= task_form.link_to_remove "Remove this task" %>
-<% end %>
-<p><%= f.link_to_add "Add a task", :tasks %></p>
 
 

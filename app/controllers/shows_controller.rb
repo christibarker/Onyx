@@ -46,6 +46,6 @@ class ShowsController < ApplicationController
 
    def show_params
     params.require(:show).permit(:title, :description, :date, 
-      :time, :id, :avatar, :seat_id)
+      :time, :id, :avatar, :seat_id, show_seatings_attributes: [:id, :name, :_destroy])
   end
 end
