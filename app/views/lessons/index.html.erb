@@ -1,5 +1,9 @@
 <div class="header">
-	<h1>Classes</h1>
+	<% if params[:workshop] %>
+		<h1>Workshops</h1>
+	<% else %>
+		<h1>Classes</h1>
+	<% end %>
 	 	<div class="row">
 	 	<div class="col l3 s3"></div>
 	 	 <div class="col l6 s9">
@@ -30,5 +34,9 @@
 	</div>
 
 		<div class="row lessons">
-	    	<%= render @lessons %>
+			<%# if lessons_path(true) %>
+				<%# render @lessons(true) %>
+			<%# else %>
+				<%= render @lessons %>
+	    <%# end %>
 	 </div>

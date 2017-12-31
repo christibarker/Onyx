@@ -1,5 +1,6 @@
 	<tr>
-	  <td><%= instructed_class.time.to_formatted_s(:short) %></td>
+		<td><%= instructed_class.date.strftime("%b %d, %Y") %></td>
+	  <td><%= instructed_class.time.strftime("%I:%M:%S %p") %></td>
 	  <td>
 	  	<%= form_with model: @enrollment, scope: 'enrollment', class: "new_enrollment"  do |f| %>
         <%= f.hidden_field :instructed_class_id, value: instructed_class.id %>

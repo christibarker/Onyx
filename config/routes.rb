@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   
 
-
-
-
-  
-
   get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {
@@ -14,6 +9,9 @@ Rails.application.routes.draw do
 
   }
 
+
+
+  resources :workshop
   resources :email
   resources :seats
   resources :shows

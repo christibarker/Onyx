@@ -15,6 +15,14 @@ cancel_user_registration GET    /users/cancel(.:format)                users/reg
                          PUT    /users(.:format)                       users/registrations#update
                          DELETE /users(.:format)                       users/registrations#destroy
                          POST   /users(.:format)                       users/registrations#create
+          workshop_index GET    /workshop(.:format)                    workshop#index
+                         POST   /workshop(.:format)                    workshop#create
+            new_workshop GET    /workshop/new(.:format)                workshop#new
+           edit_workshop GET    /workshop/:id/edit(.:format)           workshop#edit
+                workshop GET    /workshop/:id(.:format)                workshop#show
+                         PATCH  /workshop/:id(.:format)                workshop#update
+                         PUT    /workshop/:id(.:format)                workshop#update
+                         DELETE /workshop/:id(.:format)                workshop#destroy
              email_index GET    /email(.:format)                       email#index
                          POST   /email(.:format)                       email#create
                new_email GET    /email/new(.:format)                   email#new

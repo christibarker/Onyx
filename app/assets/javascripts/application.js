@@ -11,8 +11,8 @@
 // about supported directives.
 
 //= require jquery3
+//= require jquery_nested_form
 //= require materialize
-//= require materialize-sprockets
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .

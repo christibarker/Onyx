@@ -1,6 +1,6 @@
 <div class="header">
 	<h1>Up Coming Shows</h1>
-	<p>call to action link</p>
+<!-- 	<p>call to action link</p> -->
 </div>
 <div class="container-fluid">
 	<div class="row">
@@ -10,20 +10,20 @@
 	      <div class="card-content white-text">
 	         <ul class="collapsible" data-collapsible="accordion">
 				    <li>
-				      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Create New Show</div>
+				      <div class="collapsible-header black-text"><i class="material-icons">filter_drama</i>Create New Show</div>
 				      <div class="collapsible-body">
 				      	<span>		<%= render 'form' %></span>
 				      </div>
 				    </li>
 				    <li>
-				      <div class="collapsible-header"><i class="material-icons">place</i>Edit Seating Chart</div>
+				      <div class="collapsible-header black-text"><i class="material-icons">place</i>Edit Seating Chart</div>
 				      <div class="collapsible-body"><span><%= link_to "Edit Seating Chart", seats_path %></span></div>
 				    </li>
 				    <li>
-				      <div class="collapsible-header"><i class="material-icons">whatshot</i>Show Seating</div>
+				      <!-- <div class="collapsible-header black-text	"><i class="material-icons">whatshot</i>Show Seating</div>
 				      <div class="collapsible-body">
 				      	<span>Lorem ipsum dolor sit amet.</span>
-				      </div>
+				      </div> -->
 				    </li>
 				  </ul>
 	      </div>
@@ -31,7 +31,7 @@
 	  </div>
 	  <div class="col s3 m3"></div>
 	</div>
-	<div class="row">
+	<div class="row shows">
 	    	<%= render @shows %>
   </div>
 </div>
