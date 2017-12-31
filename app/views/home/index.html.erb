@@ -40,9 +40,9 @@
         <p>An Onyx is composed of straight and parallel bands of different colors that come together to create a strong black stone that represents strength, courage, beauty and grace. All of our students and instructors are those bands of color that make us whole, without all of you we would not be an Onyx. At Onyx it is our purpose to provide you a safe haven to be yourself without judgment and to overcome fears. Whatever strength you desire to find whether it is physical or mental we are to support you.  If your goal is to learn a new hobby, meet new friends, defy gravity,  or just escape the daily stressors of life Onyx will be here for you, cheering you on!</p>
       </div>
 	      <% if user_signed_in? %>
-		    	<span class="card-title"><%= link_to "Join Us", instructed_classes_path %></span>
+		    	<span class="card-title join"><%= link_to "Join Us", instructed_classes_path %></span>
 		    <% else %>
-		      <span class="card-title"><%= link_to "Login to start a class", user_session_path %></span>
+		      <span class="card-title join"><%= link_to "Login to start a class", user_session_path %></span>
 		    <% end %>
     	</div>
 		</div>
@@ -57,9 +57,9 @@
 					We have 16 instructors to help keep you safe and product & apparel boutique to supply you with what you need for your ONYX experience.</p>
 	      </div>
 	       <% if user_signed_in? %>
-		    	<span class="card-title"><%= link_to "Join Us", instructed_classes_path %></span>
+		    	<span class="card-title join"><%= link_to "Join Us", instructed_classes_path %></span>
 		    <% else %>
-		      <span class="card-title"><%= link_to "Login to start a class", user_session_path %></span>
+		      <span class="card-title join"><%= link_to "Login to start a class", user_session_path %></span>
 		    <% end %>
 	    	</div>
 			</div>
@@ -94,7 +94,7 @@
 			</div>
 		  <div class="col s3 m3">
 				<div><%= image_tag("pole_image_four.png", class: "circle") %>
-					<div class="flow-text">Silks</div>
+					<div class="flow-text">Ariel Hammock</div>
 				</div>
 	  	</div>
 	  </div><!-- end of row -->
