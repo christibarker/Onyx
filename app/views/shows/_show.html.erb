@@ -6,14 +6,17 @@
 	      <div class="card-stacked">
 	        <div class="card-content">
 	        	<span class="card-title">
-	        		<p><%=  show.date %></p>
-		           <p><%=  show.time %></p><%= show.title %></span>
+	        		<p><%= show.date.strftime("%b %d, %Y") %></p>
+		           <p><%= show.time.strftime("%I:%M:%S %p") %></p>
+		           <p><%= show.title %></p>
 		          <p><%= show.description %></p>
 	        </div>
-	        <div class="card-action float_right">
-	        	<%= link_to "delete", show, method: :delete, remote: true, class: "destroy_show float_right"%>
+	        <% if !local_assigns[:hide_link] %>
+	        	<div class="card-action float_right">
+	        		<%= link_to "delete", show, method: :delete, remote: true, class: "destroy_show float_right"%>
 	 	          <%= link_to "edit", edit_show_path(show), class: "float_right" %>
 	        </div>
+	       <% end %>
 	      </div>
 	    </div>
 	  </div>

@@ -1,7 +1,11 @@
 class LessonsController < ApplicationController
   def index
-    @lessons = Lesson.all
-    @lesson = Lesson.new
+    if params[:workshop]
+      @lessons = Lesson.where.not(workshop: nil)
+    else
+      @lessons = Lesson.where(workshop: nil)
+      @lesson = Lesson.new
+    end
   end
 
   def new

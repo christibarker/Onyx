@@ -1,6 +1,6 @@
 <tr class="enrollment">
-	<td><%= enrollment.instructed_class.date %></td>
-	<td><%= enrollment.instructed_class.time.to_formatted_s(:short) %></td>
+	<td><%= enrollment.instructed_class.date.strftime("%b %d, %Y") %></td>
+	  <td><%= enrollment.instructed_class.time.strftime("%I:%M:%S %p") %></td>
 	<% if !local_assigns[:hide_name] %>
 		<td><%= enrollment.user.first_name %>  <%= enrollment.user.last_name %></td>
 	<% end %>

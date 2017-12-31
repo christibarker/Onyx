@@ -6,3 +6,12 @@ $(document).on 'turbolinks:load', ->
 	$('.destroy_show').on 'ajax:success', ->
 		# console.log('worked')
 		$(this).closest('.show').remove()
+
+  
+  $('select').material_select()
+
+  $('.add_nested_fields').click ->
+  	alert('hi')
+
+	$('.part_show').truncate
+		lines: 2
