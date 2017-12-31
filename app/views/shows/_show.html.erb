@@ -6,10 +6,17 @@
 	      <div class="card-stacked">
 	        <div class="card-content">
 	        	<span class="card-title">
-	        		<p><%= show.date.strftime("%b %d, %Y") %></p>
-		           <p><%= show.time.strftime("%I:%M:%S %p") %></p>
-		           <p><%= show.title %></p>
+	        		<p><%# show.date.strftime("%b %d, %Y") %></p>
+		          <p><%# show.time.strftime("%I:%M:%S %p") %></p>
+		          <p><%= show.title %></p>
 		          <p><%= show.description %></p>
+		          <p><%# show.show_seatings.seat %>
+			          <%= form_with model: @show, scope: 'show', class: "book_seat"  do |f| %>
+	        				<%= f.hidden_field :show_id, value: show.id %>
+	        				<%= f.hidden_field :current_user_id, value: current_user.id %>
+	        				<%= f.submit "book ticket", :disable_with => 'Submiting...' %>
+	       				<% end %>
+       				</p>
 	        </div>
 	        <% if !local_assigns[:hide_link] %>
 	        	<div class="card-action float_right">

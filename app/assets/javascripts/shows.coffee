@@ -7,11 +7,8 @@ $(document).on 'turbolinks:load', ->
 		# console.log('worked')
 		$(this).closest('.show').remove()
 
-  
-  $('select').material_select()
-
   $('.add_nested_fields').click ->
-  	alert('hi')
+  	$('select').material_select()
 
 	$('.part_show').truncate
 		lines: 2
