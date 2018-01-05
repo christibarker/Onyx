@@ -1,4 +1,5 @@
 class EnrollmentsController < ApplicationController
+  access teacher: [:index], admin: :all
   def index
     @lessons = Lesson.all
     @teachers = Teacher.all

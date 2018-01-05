@@ -1,5 +1,5 @@
 class ShowsController < ApplicationController
-  access all: [:show, :index], user: {except: [:destroy, :create, :edit]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :create, :edit, :update]}, admin: :all
   
 
   def index
