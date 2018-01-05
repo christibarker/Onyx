@@ -62,7 +62,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: onyx_test
+  database: onyx
   adapter: postgresql
   encoding: unicode
   pool: 5
@@ -90,6 +90,6 @@ test:
 #
 production:
   <<: *default
-  database: onyx_production
+  database: onyx
   username: onyx
   password: <%= ENV['ONYX_DATABASE_PASSWORD'] %>
