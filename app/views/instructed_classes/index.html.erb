@@ -22,14 +22,16 @@
 
 <div class="row">
 	<div class="col s3 m3"></div>
-  <div class="col s12 m6">
-    <div class="card grey darken-4">
-      <div class="card-content white-text">
-        <span class="card-title center">Create Schedule/Workshop Schedule</span>
-    		<%= render 'form' %>
-      </div>
-    </div>
-  </div>
+	<% if logged_in?(:admin) %> 
+	  <div class="col s12 m6">
+	    <div class="card grey darken-4">
+	      <div class="card-content white-text">
+	        <span class="card-title center">Create Schedule/Workshop Schedule</span>
+	    		<%= render 'form' %>
+	      </div>
+	    </div>
+	  </div>
+  <% end %>
   <div class="col s3 m3"></div>
 </div>
 <div class="row">
