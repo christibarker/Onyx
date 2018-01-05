@@ -1,4 +1,6 @@
 class LessonsController < ApplicationController
+  access all: [:show, :index], user: {except: [:destroy, :create, :edit]}, admin: :all
+  
   def index
     if params[:workshop]
       @lessons = Lesson.where.not(workshop: nil)
