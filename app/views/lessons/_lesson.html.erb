@@ -11,13 +11,13 @@
 			<p class="<%= 'part_description' if !local_assigns[:part_description] %>"><%= lesson.description %></p>
 			</div>
 			<% if !local_assigns[:hide_link] %>
-			<div class="card-action">
-			<%= link_to "Find out more about the class!", lesson_path(lesson)  %>
-			<% if logged_in?(:admin) %> 
-				<%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
-				<%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
-			<% end %>
-			</div>
+				<div class="card-action">
+				<%= link_to "Find out more about the class!", lesson_path(lesson)  %>
+				<% if logged_in?(:admin) %> 
+					<%= link_to "delete", lesson, method: :delete, remote: true, class: "destroy_lesson float_right"%>
+					<%= link_to "edit", edit_lesson_path(lesson), class: "float_right" %>
+				<% end %>
+				</div>
 			<% end %>
 			</div>
 		</div>
