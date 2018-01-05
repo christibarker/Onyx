@@ -1,4 +1,7 @@
 class ShowsController < ApplicationController
+  access all: [:show, :index], user: {except: [:destroy, :create, :edit, :update]}, admin: :all
+  
+
   def index
     @shows = Show.all
     @show = Show.new
@@ -6,6 +9,7 @@ class ShowsController < ApplicationController
     @show.show_seatings.build
     @seats = Seat.all
     @show_seating = ShowSeating.all
+    @user = User.all
   end
 
   def new

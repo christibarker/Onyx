@@ -14,8 +14,13 @@
 		        <div class="card-action">
 		        	<%= link_to "Find out more about me!", teacher_path(teacher) %>
 		        	<% if logged_in?(:admin) %> 
+<<<<<<< HEAD
 			        	<%= link_to "delete", teacher, method: :delete, remote: true, class: "destroy_teacher float_right" %>
 			 	        <%= link_to "edit", edit_teacher_path(teacher), class: "float_right" %>
+=======
+		        		<%= link_to "delete", teacher, method: :delete, remote: true, class: "destroy_teacher float_right" %>
+		 	          <%= link_to "edit", edit_teacher_path(teacher), class: "float_right" %>
+>>>>>>> dc217db15a8117984b95facbfc23bec9405e75e5
 		 	        <% end %>
 		        </div>
 		      <% end %>

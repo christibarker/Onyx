@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  access all: [:show, :index], user: {except: [:destroy, :create, :edit]}, admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :create, :edit, :update]}, admin: :all
 
   # one other option that might seem a bit weird is to put a group of roles in an array:
   # access [:all, :user] => [:show, :index]
