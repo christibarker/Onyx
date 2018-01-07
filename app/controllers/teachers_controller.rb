@@ -15,6 +15,7 @@ class TeachersController < ApplicationController
 
   def create
     @teacher = Teacher.new
+    User.create(email: params[:email], first_name:, roles: [:teacher])
     respond_to do |format|
       @teacher = Teacher.create(teacher_params)
       format.js
