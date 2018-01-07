@@ -32,8 +32,6 @@
 
           <%= devise_error_messages! %>
           <br>
-          <%= f.select :roles, ['admin', 'teacher', 'user'], {}, {class: "form-control", id: "role"} %>
-          <br>
           <div class="field">
             <%= f.label :first_name %><br />
             <%= f.text_field :first_name, autofocus: true %>

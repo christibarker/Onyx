@@ -11,6 +11,9 @@
         <br>
         <%= f.file_field :avatar, class:"button" %>
         <br>
+        <%# f.select :roles, ['admin', 'teacher', 'user'], {}, {class: "form-control", id: "role"} %>
+        <br>
+        <%= f.email_field :email, placeholder: 'email', class: "form-control", id: "email" %>
         <br>
           <div class="black-text">
             <%= f.submit "ADD" %>
