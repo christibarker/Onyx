@@ -1,6 +1,6 @@
 class Users::SessionsController < Devise::SessionsController
   before_action :configure_sign_in_params, only: [:create]
-  access all: [:show, :index], user: {except: [:update]}, admin: :all
+  # access all: [:show, :index], user: {except: [:update]}, admin: :all
 
   # GET /resource/sign_in
   def new
