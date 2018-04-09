@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'admin/index'
+
   get "/pages/:page" => "pages#show", as: 'static'
 
   devise_for :users, controllers: {

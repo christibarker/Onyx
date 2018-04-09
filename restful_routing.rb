@@ -1,4 +1,5 @@
                   Prefix Verb   URI Pattern                            Controller#Action
+             admin_index GET    /admin/index(.:format)                 admin#index
                   static GET    /pages/:page(.:format)                 pages#show
         new_user_session GET    /users/sign_in(.:format)               users/sessions#new
             user_session POST   /users/sign_in(.:format)               users/sessions#create

@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  access all: [:show, :index], user: {except: [:destroy, :create, :edit, :update]}, admin: :all
+  # access all: [:show, :index], user: {except: [:destroy, :create, :edit, :update]}, admin: :all
   
   def index
     if params[:workshop]
@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
       @lesson = Lesson.new
     end
   end
-
+  
   def new
     @lesson = Lesson.new
   end
